@@ -1,0 +1,40 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main>
+    <route path="cuentas">
+      <application name="@banco/mfe-cuentas"></application>
+    </route>
+
+    <route path="angular5">
+      <div id="angular5-container"></div>
+      <application name="@banco/angular5"></application>
+    </route>
+
+    <!--<route path="angular5">
+      <application name="@banco/mfe-legacy-angular5"></application>
+    </route>-->
+
+    <route default>
+      <application name="@banco/mfe-cuentas"></application>
+    </route>
+
+
+  </main>
+</single-spa-router>
